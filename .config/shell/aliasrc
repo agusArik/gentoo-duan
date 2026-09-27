@@ -10,9 +10,9 @@ alias \
 	ytp='yt -x -f bestaudio/best -o "~/Vídeos/Podcast/%(title)s.%(ext)s"' \
 	ytn='yt --embed-thumbnail --embed-metadata -o "./%(title)s.%(ext)s"'
 
-# Expand sudo to work with aliases
+# Expand sudo/doas to work with aliases
 alias sudo="sudo "
-alias suenv="sudo -E " # principalmente utilizado para usar el clipboard de wayland en neovim, desde root
+alias doas="doas "
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
@@ -56,7 +56,7 @@ alias \
 
 # Comandos administrativos de Portage
 alias \
-	eupdate="doas emerge --ask --update --deep --changed-use --getbinpkg @world" \
+	eupdate="doas emerge --ask --update --deep --changed-use @world" \
 	eneeded="doas emerge --ask --noreplace" \
 	eclean="doas emerge --ask --depclean" \
     edeps="emerge --pretend --depclean --verbose"
