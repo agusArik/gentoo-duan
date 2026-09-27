@@ -19,3 +19,7 @@ sys-power/auto-cpufreq
 x11-themes/catppuccin-gtk
 app-misc/anki
 net-misc/localsend-bin
+app-misc/nwg-look
+x11-apps/xcur2png
+app-text/tldr
+

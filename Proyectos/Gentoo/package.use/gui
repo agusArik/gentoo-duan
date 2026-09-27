@@ -11,7 +11,8 @@ media-video/obs-studio screencast v4l
 net-im/discord appindicator
 app-misc/anki gui
 app-i18n/mozc fcitx5 -ibus -gui
-media-gfx/inkscape cdr jpeg exif spell 
+media-gfx/inkscape cdr jpeg exif spell
+dev-qt/qtwebengine bindist qml screencast
 dev-python/pyqt6  -qml -quick -sql -svg -webchannel -xml
 dev-qt/qtwebchannel qml
 dev-libs/libxml2 icu
