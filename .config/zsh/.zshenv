@@ -37,6 +37,7 @@ export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible/ansible.cfg"
 export ELECTRUMDIR="$XDG_DATA_HOME/electrum"
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
+export QT_QPA_PLATFORMTHEME=qt6ct
 
 # Other program settings:
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
