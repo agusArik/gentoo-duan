@@ -1,12 +1,37 @@
-# Ignora todo menos config
+# Ignora todo menos config y .local/bin
 /*
-!.config/
 !.local/bin/
 !Proyectos/Gentoo/
+!.config/
 
 !.gitignore
 
-# Ignora esto dentro de config
+# Ignora todo dentro de .config excepto lo declarado abajo
+.config/*
+!.config/dunst/
+!.config/fontconfig/
+!.config/foot/
+!.config/gammastep/
+!.config/mango/
+!.config/mimeapps.list
+!.config/mpd/
+!.config/mpv/
+!.config/ncmpcpp/
+!.config/nvim/
+!.config/rofi/
+!.config/shell/
+!.config/sioyek/
+!.config/swaylock/
+!.config/systemd/
+!.config/tmux/
+!.config/user-dirs.dirs
+!.config/waybar/
+!.config/xdg-desktop-portal/
+!.config/yazi/
+!.config/zathura/
+!.config/zsh/
+
+# Excepciones puntuales dentro de lo permitido
 *.db
 *.log
 .config/mpd/pid
@@ -15,38 +40,7 @@
 .config/yazi/flavors/
 .config/yazi/plugins/
 .config/zsh/.zcompcache
+.config/zathura/zathura-theme
 .config/systemd/**
 !.config/systemd/**/
-!.config/systemd/user/mpdscribble.service
 !.config/systemd/user/waypaperd*
-.config/GIMP/
-.config/Kid3/
-.config/QtProject.conf
-.config/zathura/zathura-theme
-.config/Thunar/
-.config/autostart/
-.config/dconf/
-.config/discord/
-.config/fcitx/
-.config/fcitx5/
-.config/gtk-3.0/
-.config/gtk-4.0/
-.config/htop/
-.config/keepassxc/
-.config/mozc/
-.config/mozilla/
-.config/nicotine/
-.config/obs-studio/
-.config/pavucontrol.ini
-.config/pulse/
-.config/rncbc.org/
-.config/transmission/
-.config/xfce4/
-.config/xsettingsd/
-.config/mpdscribble/
-.config/qalculate/
-.config/procps/
-.config/wget/
-.config/calcure/
-.config/ibus/
-.config/calibre/
