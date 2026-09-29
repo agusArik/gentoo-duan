@@ -1,8 +1,5 @@
 app-i18n/mozc
-gui-wm/mangowm
 gui-apps/waybar
-gui-apps/swayidle
-gui-libs/xdg-desktop-portal-wlr
 gui-apps/foot
 gui-apps/grim
 gui-apps/slurp
@@ -10,7 +7,6 @@ gui-apps/swaybg
 gui-apps/swaylock
 gui-apps/wev
 gui-apps/wl-clipboard
-gui-apps/wlr-randr
 gui-apps/wtype
 x11-apps/xrdb
 x11-misc/gammastep

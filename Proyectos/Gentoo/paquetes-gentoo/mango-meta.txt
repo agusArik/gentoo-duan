@@ -1,0 +1,7 @@
+gui-wm/mangowm
+gui-libs/xdg-desktop-portal-wlr
+gui-apps/wlr-randr
+gui-apps/sway-audio-idle-inhibit
+gui-apps/swayidle
+gui-libs/wlroots
+gui-libs/scenefx
