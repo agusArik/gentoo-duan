@@ -8,7 +8,6 @@ gnome-base/gvfs
 gnome-extra/nm-applet
 net-wireless/blueman
 net-wireless/bluez
-gnome-extra/polkit-gnome
 sys-power/thermald
 xfce-base/thunar
 xfce-base/thunar-volman

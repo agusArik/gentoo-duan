@@ -5,3 +5,4 @@ gui-apps/sway-audio-idle-inhibit
 gui-apps/swayidle
 gui-libs/wlroots
 gui-libs/scenefx
+gnome-extra/polkit-gnome

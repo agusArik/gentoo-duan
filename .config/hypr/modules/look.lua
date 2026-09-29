@@ -1,0 +1,65 @@
+hl.config({
+	general = {
+		gaps_in = 3,
+		gaps_out = 10,
+
+		border_size = 2,
+
+		allow_tearing = false,
+
+		-- Set to true enable resizing windows by clicking and dragging on borders and gaps
+		resize_on_border = true,
+		layout = "dwindle",
+
+		col = {
+			-- active_border = { colors = { "rgb(5e81ac)", "rgba(2e3440ff)", "rgba(eceff4aa)" }, angle = 45 },
+            -- inactive_border = { colors = { "rgb(d8dee9)" } },
+			active_border = { colors = { "rgba(005577ff)" } },
+            inactive_border = { colors = { "rgba(201b14ff)" } },
+		},
+	},
+
+	decoration = {
+		rounding = 0,
+		rounding_power = 2,
+
+		-- Change transparency of focused and unfocused windows
+		active_opacity = 1.0,
+		inactive_opacity = 0.8,
+
+		shadow = {
+			enabled = false,
+			range = 20,
+			offset = { 0, 2 },
+			render_power = 10,
+			color = "rgba(00000020)",
+		},
+
+		blur = {
+			enabled = true,
+			size = 5,
+			passes = 2,
+			vibrancy = 1.2,
+			xray = true,
+			special = false,
+			new_optimizations = true,
+			brightness = 0.9,
+			noise = 0.02,
+			contrast = 0.9,
+			vibrancy_darkness = 0.5,
+			popups = false,
+			popups_ignorealpha = 0.6,
+			input_methods = true,
+			input_methods_ignorealpha = 0.8,
+		},
+	},
+
+	dwindle = {
+		preserve_split = true,
+	},
+
+	master = {
+		new_on_active = "after",
+		mfact = 0.60,
+	},
+})
