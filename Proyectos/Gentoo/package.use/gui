@@ -8,6 +8,7 @@ app-editors/neovim -gtk
 net-p2p/transmission gtk
 app-admin/keepassxc browser -ssh-agent
 media-video/obs-studio screencast v4l
+x11-misc/rofi-emoji -wayland
 net-im/discord appindicator
 app-misc/anki gui
 app-i18n/mozc fcitx5 -ibus -gui

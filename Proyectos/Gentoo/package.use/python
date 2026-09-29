@@ -1,3 +1,21 @@
 dev-python/packaging python_targets_python3_13 python_targets_python3_14
 dev-python/poetry-core python_targets_python3_13 python_targets_python3_14
 
+# required by dev-python/urwid-4.0.13::gentoo
+# required by sys-power/auto-cpufreq-2.6.0::guru
+# required by @selected
+# required by @world (argument)
+>=dev-python/wcwidth-0.8.3 python_targets_python3_13
+# required by dev-python/urwid-4.0.13::gentoo
+# required by sys-power/auto-cpufreq-2.6.0::guru
+# required by @selected
+# required by @world (argument)
+>=dev-python/gpep517-23 python_targets_python3_13
+# required by dev-python/setuptools-84.0.0::gentoo
+# required by dev-python/setuptools-scm-10.2.1::gentoo
+# required by dev-python/urwid-4.0.13::gentoo
+# required by sys-power/auto-cpufreq-2.6.0::guru
+# required by @selected
+# required by @world (argument)
+>=dev-python/platformdirs-4.11.5 python_targets_python3_13
+

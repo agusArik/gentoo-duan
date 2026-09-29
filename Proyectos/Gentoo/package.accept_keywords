@@ -1,15 +1,20 @@
 gui-libs/scenefx
-gui-wm/mangowm
+gui-wm/mangowm **
+app-text/sioyek **
 media-fonts/nerdfonts
 media-gfx/nsxiv
 gui-apps/wlr-dpms
 gui-apps/wlr-randr
 gui-apps/wl-clip-persist
 x11-misc/rofi-calc
+x11-misc/rofi-emoji
+gui-apps/rofi-wayland
 app-text/typst
-app-text/sioyek **
 media-video/obs-studio
+media-video/wlrobs
 app-admin/keepassxc
+gui-apps/sway-audio-idle-inhibit
+gui-apps/wl-mirror
 
 app-misc/brightnessctl 
 app-misc/yazi 
@@ -23,3 +28,10 @@ app-misc/nwg-look
 x11-apps/xcur2png
 app-text/tldr
 
+app-editors/neovim
+dev-lua/luv
+media-sound/qpwgraph
+app-shells/zsh
+app-shells/zsh-history-substring-search 
+app-shells/zsh-autosuggestions 
+app-shells/zsh-autocomplete 
