@@ -3,6 +3,7 @@ local fileManager = "Thunar"
 local menu = 'rofi -show drun'
 local mainMod = "SUPER"
 local browser = "firefox-bin"
+local path = "~/.local/bin"
 
 hl.bind(
 	mainMod .. " + Q",
@@ -20,8 +21,8 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + A", hl.dsp.layout("togglesplit"))
 
 -- Invocación global de tmux sessionizer
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("tmux-sessionizer.sh"))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("session-finder.sh"))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(path .. "/tmux-sessionizer.sh"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(path .. "/session-finder.sh"))
 
 -- Mount android device
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("simple-mtpfs ~/Público/"))
@@ -40,7 +41,7 @@ hl.bind(mainMod .. " + ALT + A", hl.dsp.exec_cmd("anki"))
 hl.bind(mainMod .. " + ALT + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + ALT + G", hl.dsp.exec_cmd("gimp"))
 hl.bind(mainMod .. " + ALT + N", hl.dsp.exec_cmd("nicotine"))
-hl.bind(mainMod .. " + ALT + T", hl.dsp.exec_cmd("transmission-qt"))
+hl.bind(mainMod .. " + ALT + T", hl.dsp.exec_cmd("transmission-gtk"))
 hl.bind(mainMod .. " + ALT + F", hl.dsp.exec_cmd("filezilla"))
 hl.bind(mainMod .. " + ALT + K", hl.dsp.exec_cmd("keepassxc"))
 hl.bind(mainMod .. " + ALT + V", hl.dsp.exec_cmd("virt-manager"))
@@ -128,7 +129,7 @@ hl.bind("Print", hl.dsp.exec_cmd("screenshot.sh"))
 
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("swaylock -f"))
 
-hl.bind(mainMod .. " + ALT + D", hl.dsp.exec_cmd("dencript.sh"))
+hl.bind(mainMod .. " + ALT + D", hl.dsp.exec_cmd(path .. "/dencript.sh"))
 
 -- con esto logramos que los binds de hyprland pasen a una VM
 -- basicamente se togglea con super + escape

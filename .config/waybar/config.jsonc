@@ -1,8 +1,11 @@
 {
   "spacing": 0,
   "height": 30,
+  "layer": "top",
+  "output": ["HDMI-A-1", "eDP-1"],
   "modules-left": [
-    "ext/workspaces"
+    "ext/workspaces",
+    "hyprland/window"
   ],
   "modules-center": [
     "mpd"
@@ -15,11 +18,15 @@
     "backlight",
     "tray"
   ],
+
+    "hyprland/window": {
+        "separate-outputs": true,
+        "max-length": 300
+    },
   "ext/workspaces": {
     "format": "{icon}",
     "ignore-hidden": true,
-    "on-click": "activate",
-    "sort-by-id": true
+    "on-click": "activate"
   },
   "mango/window": {
     "format": "{title}",

@@ -67,7 +67,7 @@ hl.window_rule({ match = { tag = "gui" }, opacity = "1.0 override" })
 hl.window_rule({ match = { tag = "pdf" }, opacity = "1.0 override" })
 
 hl.window_rule({ match = { class = ".*(KeePassXC)$" }, opacity = "1.0 override" })
-hl.window_rule({ match = { class = "com.transmissionbt*" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "^(com.transmissionbt).*$" }, opacity = "1.0 override" })
 
 -- Fix pinentry losing focus
 hl.window_rule({
@@ -101,4 +101,4 @@ hl.window_rule({ match = { class = "^.*(obsproject).*" }, workspace = "7" })
 hl.window_rule({ match = { class = "^.*(Nicotine)$" }, workspace = "8 silent" })
 
 -- Workspace 10
-hl.window_rule({ match = { title = "com.transmissionbt*" }, workspace = "10 silent" })
+hl.window_rule({ match = { class = "^(com.transmissionbt).*$" }, workspace = "10 silent" })
