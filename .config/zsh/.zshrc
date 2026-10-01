@@ -42,7 +42,7 @@ compinit -C -d ~/.cache/zsh/zcompdump
 
 # --------- Gentoo ---------
 # Correction
-setopt correctall
+# setopt correctall
 
 # Prompt
 autoload -U promptinit
