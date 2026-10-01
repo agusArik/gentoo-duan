@@ -37,7 +37,6 @@ hl.window_rule({ match = { class = "^(libreoffice)-*$" }, tag = "+gui" })
 hl.window_rule({ match = { class = "^.*(Nicotine)$" }, tag = "+gui" })
 hl.window_rule({ match = { class = "steam" }, tag = "+gui" })
 hl.window_rule({ match = { class = "xdg-desktop-portal-gtk" }, tag = "+gui" })
-hl.window_rule({ match = { class = "xdg-desktop-portal-gtk" }, tag = "+gui" })
 hl.window_rule({ match = { class = "^([Vv]irt.*)" }, tag = "+gui" })
 hl.window_rule({ match = { class = "filezilla" }, tag = "+gui" })
 
@@ -67,7 +66,7 @@ hl.window_rule({ match = { tag = "gui" }, opacity = "1.0 override" })
 hl.window_rule({ match = { tag = "pdf" }, opacity = "1.0 override" })
 
 hl.window_rule({ match = { class = ".*(KeePassXC)$" }, opacity = "1.0 override" })
-hl.window_rule({ match = { class = "^(com.transmissionbt).*$" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "^(com.transmissionbt).*$" }, opacity = "1.0 override", float = true })
 
 -- Fix pinentry losing focus
 hl.window_rule({

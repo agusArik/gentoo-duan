@@ -106,9 +106,9 @@ hl.bind("XF86Calculator", hl.dsp.exec_cmd("rofi -show calc -no-show-match -no-so
 
 -- Requires playerctl
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- Manejar dunst
 
@@ -125,7 +125,7 @@ hl.bind("CTRL + period", hl.dsp.exec_cmd("dunstctl history-pop"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("chosen_zathura_theme.sh"))
 
 -- Screenshot keybindings NOTE: You may need to press Fn key as well
-hl.bind("Print", hl.dsp.exec_cmd("screenshot.sh"))
+hl.bind("Print", hl.dsp.exec_cmd(path .. "/screenshot.sh"))
 
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("swaylock -f"))
 
