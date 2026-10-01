@@ -167,6 +167,7 @@ require("mini.icons").setup({})
 require("mason").setup({})
 require("mason-lspconfig").setup({
 	ensure_installed = {
+		"efm",
 		"lua_ls",
 		"ts_ls",
 		"bashls",
@@ -214,6 +215,7 @@ do
 		},
 		init_options = { documentFormatting = true },
 		settings = {
+			rootMarkers = { ".git/" },
 			languages = {
 				css = { prettier_d },
 				html = { prettier_d },
@@ -233,4 +235,5 @@ do
 			},
 		},
 	})
+	vim.lsp.enable("efm")
 end

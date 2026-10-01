@@ -11,6 +11,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		"*.jsx",
 		"*.ts",
 		"*.nix",
+		"*.md",
 		"*.tsx",
 		"*.json",
 		"*.css",

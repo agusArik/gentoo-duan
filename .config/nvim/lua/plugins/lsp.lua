@@ -104,8 +104,18 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
-vim.lsp.config("elf", {})
-vim.lsp.config("markdown_oxide", {})
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+vim.lsp.config("markdown_oxide", {
+	capabilities = vim.tbl_deep_extend("force", capabilities, {
+		workspace = {
+			didChangeWatchedFiles = {
+				dynamicRegistration = true,
+			},
+		},
+	}),
+})
+
 vim.lsp.config("ts_ls", {})
 vim.lsp.config("bashls", {})
 vim.lsp.config("tinymist", {})
@@ -118,5 +128,4 @@ vim.lsp.enable({
 	"clangd",
 	"tinymist",
 	"markdown_oxide",
-	"elf",
 })
