@@ -188,6 +188,14 @@ vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
 	end,
 })
 
+-- Fix Netrw not ignoring files in .gitignore
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "netrw" },
+	callback = function()
+		vim.cmd("let g:netrw_list_hide= netrw_gitignore#Hide() .. ',.git*,__pycache__'")
+	end,
+})
+
 -- vim.keymap.set("n", "<Leader>b", function()
 -- 	local curbufnr = vim.api.nvim_get_current_buf()
 -- 	local buflist = vim.api.nvim_list_bufs()
