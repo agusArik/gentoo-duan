@@ -1,6 +1,6 @@
 local terminal = "footclient"
 local fileManager = "Thunar"
-local menu = 'rofi -show drun'
+local menu = "rofi -show drun"
 local mainMod = "SUPER"
 local browser = "firefox-bin"
 local path = "~/.local/bin"
@@ -25,8 +25,8 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(path .. "/tmux-sessionizer.sh"))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(path .. "/session-finder.sh"))
 
 -- Mount android device
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("simple-mtpfs ~/Público/"))
-hl.bind(mainMod .. " + U", hl.dsp.exec_cmd("fusermount -u ~/Público/"))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("simple-mtpfs /mnt/android"))
+hl.bind(mainMod .. " + U", hl.dsp.exec_cmd("fusermount3 -u /mnt/android"))
 
 -- Reiniciar Waybar
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("sh ~/.config/hypr/scripts/start-waybar.sh"))
