@@ -1,27 +1,27 @@
 gui-libs/scenefx
-gui-wm/mangowm **
+gui-wm/mangowm
+gui-apps/wlr-randr
+gui-apps/wev 
+gui-apps/wtype 
+gui-apps/sway-audio-idle-inhibit
+
+*/*::hyproverlay
+
 app-text/sioyek **
+app-text/typst
 media-fonts/nerdfonts
 media-gfx/nsxiv
-gui-apps/wlr-dpms
-gui-apps/wlr-randr
-gui-apps/wl-clip-persist
+
 x11-misc/rofi-calc
 x11-misc/rofi-emoji
 gui-apps/rofi-wayland
-app-text/typst
+
 media-video/obs-studio
-media-video/wlrobs
 app-admin/keepassxc
-gui-apps/sway-audio-idle-inhibit
-gui-apps/wl-mirror
 
 app-misc/brightnessctl 
-app-misc/yazi 
-gui-apps/wev 
-gui-apps/wtype 
+app-misc/yazi
 sys-power/auto-cpufreq 
-x11-themes/catppuccin-gtk
 app-misc/anki
 net-misc/localsend-bin
 app-misc/nwg-look
@@ -32,6 +32,11 @@ app-editors/neovim
 dev-lua/luv
 media-sound/qpwgraph
 app-shells/zsh
-app-shells/zsh-history-substring-search 
-app-shells/zsh-autosuggestions 
-app-shells/zsh-autocomplete 
+app-shells/zsh-history-substring-search
+app-shells/zsh-autosuggestions
+app-shells/zsh-autocomplete
+
+dev-cpp/sdbus-c++
+app-office/calcure **
+dev-python/holidays **
+dev-python/holidays
