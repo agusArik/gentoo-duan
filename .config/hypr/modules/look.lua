@@ -60,4 +60,8 @@ hl.config({
 		new_on_active = "after",
 		mfact = 0.60,
 	},
+
+	scrolling = {
+		column_width = 0.7,
+	},
 })

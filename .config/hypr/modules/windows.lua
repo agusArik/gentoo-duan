@@ -12,39 +12,10 @@ hl.window_rule({
 	no_focus = true,
 })
 
--- Tags
-hl.window_rule({ match = { class = "mpv" }, tag = "+video" })
-hl.window_rule({ match = { class = "Nsxiv" }, tag = "img" })
-hl.window_rule({ match = { class = "^.*(zathura)$" }, tag = "+pdf" })
-hl.window_rule({ match = { class = "sioyek" }, tag = "+pdf" })
-hl.window_rule({ match = { class = "firefox" }, tag = "+browser" })
-
--- GUI
-hl.window_rule({ match = { class = "^(blue).*$" }, tag = "+gui" })
-hl.window_rule({ match = { class = "^(discord)$" }, tag = "+gui" })
-hl.window_rule({ match = { class = "^(code)-.*$" }, tag = "+gui" })
-hl.window_rule({ match = { class = "^(calibre).*$" }, tag = "+gui" })
-hl.window_rule({ match = { class = "gcr-prompter" }, tag = "+gui" })
-hl.window_rule({ match = { class = "codium" }, tag = "+gui" })
-hl.window_rule({ match = { class = "nwg-look" }, tag = "+gui" })
-hl.window_rule({ match = { class = "^(Thunar).*$" }, tag = "+gui" })
-hl.window_rule({ match = { class = "^.*(pavucontrol)$" }, tag = "+gui" })
-hl.window_rule({ match = { class = "gimp" }, tag = "+gui" })
-hl.window_rule({ match = { class = "anki" }, tag = "+gui" })
-hl.window_rule({ match = { class = "^(file).*$" }, tag = "+gui" })
-hl.window_rule({ match = { class = "^.*(mGBA).*$" }, tag = "+gui" })
-hl.window_rule({ match = { class = "^(libreoffice)-*$" }, tag = "+gui" })
-hl.window_rule({ match = { class = "^.*(Nicotine)$" }, tag = "+gui" })
-hl.window_rule({ match = { class = "steam" }, tag = "+gui" })
-hl.window_rule({ match = { class = "xdg-desktop-portal-gtk" }, tag = "+gui" })
-hl.window_rule({ match = { class = "^([Vv]irt.*)" }, tag = "+gui" })
-hl.window_rule({ match = { class = "filezilla" }, tag = "+gui" })
-
--- Float
 hl.window_rule({
 	name = "apply-video",
 	match = {
-		tag = "video",
+		tag = "mpv",
 	},
 	opacity = "1.0 override",
 	no_blur = true,
@@ -54,50 +25,40 @@ hl.window_rule({
 	max_size = { 849, 477 },
 })
 
-hl.window_rule({ match = { tag = "gui", float = true } })
+hl.window_rule({ match = { class = "Nsxiv" }, float = true, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "^.*(zathura)$" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "sioyek" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "firefox" }, opacity = "1.0 override", workspace = "1 silent" })
 
--- Sizes
-hl.window_rule({ match = { tag = "img" }, float = true })
+-- GUI
+hl.window_rule({ match = { class = "^(blue).*$" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "^[sS]team" }, opacity = "1.0 override", workspace = "3 silent", float = true })
+hl.window_rule({ match = { class = "anki" }, opacity = "1.0 override", workspace = "4" })
+hl.window_rule({ match = { class = "^([Vv]irt.*)" }, opacity = "1.0 override", workspace = "4 silent" })
+hl.window_rule({ match = { class = ".*(KeePassXC)$" }, opacity = "1.0 override", workspace = "5" })
+hl.window_rule({ match = { class = "gimp" }, opacity = "1.0 override", workspace = "6 silent" })
+hl.window_rule({ match = { class = "^.*(obsproject).*" }, opacity = "1.0 override", workspace = "7" })
+hl.window_rule({ match = { class = "^.*(Nicotine)$" }, opacity = "1.0 override", workspace = "8 silent" })
+hl.window_rule({ match = { class = "^(discord)$" }, opacity = "1.0 override", workspace = "9" })
+hl.window_rule({
+	match = { class = "^(com.transmissionbt).*$" },
+	opacity = "1.0 override",
+	float = true,
+	workspace = "10 silent",
+})
 
--- Opacity and blur
-hl.window_rule({ match = { tag = "img" }, float = true, opacity = "1.0 override" })
-hl.window_rule({ match = { tag = "browser" }, opacity = "1.0 override" })
-hl.window_rule({ match = { tag = "gui" }, opacity = "1.0 override" })
-hl.window_rule({ match = { tag = "pdf" }, opacity = "1.0 override" })
-
-hl.window_rule({ match = { class = ".*(KeePassXC)$" }, opacity = "1.0 override" })
-hl.window_rule({ match = { class = "^(com.transmissionbt).*$" }, opacity = "1.0 override", float = true })
+hl.window_rule({ match = { class = "^(calibre).*$" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "gcr-prompter" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "nwg-look" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "^(Thunar).*$" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "^.*(pavucontrol)$" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "^(file).*$" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "^.*(mGBA).*$" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "^(libreoffice)-*$" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "xdg-desktop-portal-gtk" }, opacity = "1.0 override" })
 
 -- Fix pinentry losing focus
 hl.window_rule({
 	match = { class = "(pinentry-)(.*)" },
 	stay_focused = true,
 })
-
--- Workspace 1
-hl.window_rule({ match = { class = "firefox" }, workspace = "1 silent" })
-
--- Worspace 3
-hl.window_rule({ match = { class = "discord" }, workspace = "3 silent" })
-hl.window_rule({ match = { title = "^[sS]team" }, workspace = "3 silent" })
-
--- Workspace 4
-hl.window_rule({ match = { class = "code-oss" }, workspace = "4 silent" })
-hl.window_rule({ match = { class = "anki" }, workspace = "4" })
-hl.window_rule({ match = { class = "^([Vv]irt.*)" }, workspace = "4 silent" })
-
--- Workspace 5
-hl.window_rule({ match = { class = ".*(KeePassXC)$" }, workspace = "5" })
-
--- Workspace 6
-hl.window_rule({ match = { class = "gimp" }, workspace = "6 silent" })
-hl.window_rule({ match = { class = "filezilla" }, workspace = "6 silent" })
-
--- Workspace 7
-hl.window_rule({ match = { class = "^.*(obsproject).*" }, workspace = "7" })
-
--- Workspace 8
-hl.window_rule({ match = { class = "^.*(Nicotine)$" }, workspace = "8 silent" })
-
--- Workspace 10
-hl.window_rule({ match = { class = "^(com.transmissionbt).*$" }, workspace = "10 silent" })
