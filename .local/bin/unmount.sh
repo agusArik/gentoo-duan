@@ -33,7 +33,7 @@ else
 		[sS])
 			printf "Desmontando %s%s...%s\n" "$BLUE" "$MOUNT_POINT" "$NC"
 			# sudo -A umount -l "$MOUNT_POINT"
-            doas umount -l "$MOUNT_POINT"
+			doas umount -l "$MOUNT_POINT"
 			printf "%sEXITO:%s Dispositivo USB desmontado con éxito\n" "$GREEN" "$NC"
 			break
 			;;
@@ -49,7 +49,7 @@ else
 fi
 
 # publico montado?
-PUBLIC_MOUNT="$(find "$HOME"/Público -maxdepth 1 ! -name "Público" | wc -l)"
+PUBLIC_MOUNT="$(find "$HOME"/Público -maxdepth 1 ! -name "Público" 2>/dev/null | wc -l)"
 if [ "$PUBLIC_MOUNT" -gt 0 ]; then
 	# unmount public
 	while true; do
@@ -59,7 +59,7 @@ if [ "$PUBLIC_MOUNT" -gt 0 ]; then
 		[sS])
 			printf "Desmontando %s$HOME/Público...%s\n" "$BLUE" "$NC"
 			# sudo -A umount -l "$HOME/Público"
-            doas umount -l "$HOME/Público"
+			doas umount -l "$HOME/Público"
 			printf "Público%s desmontado%s\n" "$GREEN" "$NC"
 			break
 			;;
