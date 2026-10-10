@@ -8,7 +8,7 @@ media-libs/freetype harfbuzz
 media-libs/libpulse X
 sci-libs/libqalculate icu
 
-media-fonts/nerdfonts iosevka iosevkaterm jetbrainsmono
+media-fonts/nerdfonts iosevka ubuntusans jetbrainsmono
 
 xfce-base/tumbler jpeg pdf epub
 >=xfce-base/thunar-4.20.8 udisks
