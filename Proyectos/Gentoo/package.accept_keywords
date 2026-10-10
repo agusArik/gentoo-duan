@@ -39,4 +39,8 @@ app-shells/zsh-autocomplete
 dev-cpp/sdbus-c++
 app-office/calcure **
 dev-python/holidays **
+
+*/*::steam-overlay
+games-util/game-device-udev-rules
+sys-libs/libudev-compat
 dev-python/holidays
