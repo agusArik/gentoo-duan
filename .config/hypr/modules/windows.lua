@@ -27,7 +27,6 @@ hl.window_rule({
 
 hl.window_rule({ match = { class = "firefox" }, opacity = "1.0 override", workspace = "1 silent" })
 hl.window_rule({ match = { class = "^(blue).*$" }, opacity = "1.0 override" })
-hl.window_rule({ match = { class = "^[sS]team" }, opacity = "1.0 override", workspace = "3 silent", float = true })
 hl.window_rule({ match = { class = "anki" }, opacity = "1.0 override", workspace = "4" })
 hl.window_rule({ match = { class = "^([Vv]irt.*)" }, opacity = "1.0 override", workspace = "4 silent" })
 hl.window_rule({ match = { class = ".*(KeePassXC)$" }, opacity = "1.0 override", workspace = "5" })
@@ -35,6 +34,7 @@ hl.window_rule({ match = { class = "gimp" }, opacity = "1.0 override", workspace
 hl.window_rule({ match = { class = "^.*(obsproject).*" }, opacity = "1.0 override", workspace = "7" })
 hl.window_rule({ match = { class = "^.*(Nicotine)$" }, opacity = "1.0 override", workspace = "8 silent" })
 hl.window_rule({ match = { class = "^(discord)$" }, opacity = "1.0 override", workspace = "9" })
+hl.window_rule({ match = { class = "^[sS]team" }, opacity = "1.0 override", workspace = "9 silent" })
 hl.window_rule({
 	match = { class = "^(com.transmissionbt).*$" },
 	opacity = "1.0 override",
@@ -58,4 +58,11 @@ hl.window_rule({ match = { class = "xdg-desktop-portal-gtk" }, opacity = "1.0 ov
 hl.window_rule({
 	match = { class = "(pinentry-)(.*)" },
 	stay_focused = true,
+})
+
+hl.workspace_rule({
+	workspace = "9",
+	layout = "scrolling",
+	no_border = true,
+	decorate = false,
 })

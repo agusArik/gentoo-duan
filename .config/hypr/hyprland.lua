@@ -27,7 +27,7 @@ require("modules/input")
 require("modules/binds")
 require("modules/windows")
 
-hl.env("GTK_THEME", "Adwaita")
+hl.env("GTK_THEME", "Adwaita-dark")
 hl.env("HYPRCURSOR_THEME", "Adwaita")
 hl.env("XCURSOR_THEME", "Adwaita")
 hl.env("XCURSOR_SIZE", "18")
