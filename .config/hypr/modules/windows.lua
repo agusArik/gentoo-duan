@@ -47,7 +47,7 @@ hl.window_rule({ match = { class = "^.*(zathura)$" }, opacity = "1.0 override" }
 hl.window_rule({ match = { class = "sioyek" }, opacity = "1.0 override" })
 hl.window_rule({ match = { class = "^(calibre).*$" }, opacity = "1.0 override" })
 hl.window_rule({ match = { class = "gcr-prompter" }, opacity = "1.0 override", float = true })
-hl.window_rule({ match = { class = "^(Thunar).*$" }, opacity = "1.0 override", float = true })
+hl.window_rule({ match = { class = "^([tT]hunar).*$" }, opacity = "1.0 override", float = true })
 hl.window_rule({ match = { class = "^.*(pavucontrol)$" }, opacity = "1.0 override", float = true })
 hl.window_rule({ match = { class = "^(file).*$" }, opacity = "1.0 override", float = true })
 hl.window_rule({ match = { class = "^.*(mGBA).*$" }, opacity = "1.0 override" })
