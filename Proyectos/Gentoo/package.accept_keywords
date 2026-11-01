@@ -8,6 +8,12 @@ gui-apps/sway-audio-idle-inhibit
 */*::hyproverlay
 
 app-text/sioyek **
+app-text/zathura
+app-text/zathura-cb
+app-text/zathura-pdf-poppler
+dev-libs/girara
+dev-libs/jemalloc
+dev-lang/rust-bin
 app-text/typst
 media-fonts/nerdfonts
 media-gfx/nsxiv
@@ -20,7 +26,6 @@ media-video/obs-studio
 app-admin/keepassxc
 
 app-misc/brightnessctl 
-app-misc/yazi
 sys-power/auto-cpufreq 
 app-misc/anki
 net-misc/localsend-bin

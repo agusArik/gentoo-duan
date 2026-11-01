@@ -14,3 +14,4 @@ xfce-base/tumbler jpeg pdf epub
 >=xfce-base/thunar-4.20.8 udisks
 >=gnome-base/gvfs-1.58.4 udisks
 >=sys-apps/systemd-261.2 policykit
+net-libs/gnutls pkcs11 tools

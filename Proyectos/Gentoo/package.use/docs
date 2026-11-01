@@ -5,4 +5,6 @@
 # required by app-text/calibre (argument)
 >=dev-python/pyqt6-6.11.0-r1 quick svg qml webchannel
 
-app-text/zathura-meta -epub
+app-text/zathura-meta cb -epub
+app-text/poppler cairo
+>=x11-libs/gdk-pixbuf-2.44.7 jpeg
