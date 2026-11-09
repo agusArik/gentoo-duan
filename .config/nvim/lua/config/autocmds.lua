@@ -1,12 +1,5 @@
 augroup = vim.api.nvim_create_augroup("UserConfig", { clear = true })
 
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "markdown" },
-	callback = function()
-		vim.treesitter.start()
-	end,
-})
-
 -- Format on save (ONLY real file buffers, ONLY when efm is attached)
 vim.api.nvim_create_autocmd("BufWritePre", {
 	group = augroup,
