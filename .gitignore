@@ -44,3 +44,4 @@
 .config/systemd/**
 !.config/systemd/**/
 !.config/systemd/user/waypaperd*
+.config/ncmpcpp/lyrics

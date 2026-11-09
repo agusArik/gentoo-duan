@@ -23,7 +23,7 @@ alias \
 	rmd="rmdir -v" \
 	du="du -h" \
 	rs="rsync -Pa" \
-	fm="thunar . > /dev/null 2>&1 &" \
+	fm="thunar > /dev/null 2>&1 &" \
 	texwatch="latexmk -pdf -pvc" # better latex compiler
 
 # ffmpeg commands
@@ -34,7 +34,7 @@ alias \
         -exec sh -c '\''i="{}"; ffmpeg -i "$i" -c:v libx264 -crf 22 "${i%.mkv}".mp4'\'' \;'
 
 alias \
-	z="zathura" \
+	z="zathura > /dev/null 2>&1" \
 	ka="killall" \
 	g="git status" \
 	gc="git commit -m" \
@@ -51,7 +51,6 @@ alias \
 	tcopy="wl-copy --trim-newline" \
 	pcopy="pwd | wl-copy --trim-newline" \
 	dopdf="lowriter --headless --convert-to pdf " \
-	wl-clients="mmsg get all-clients | jq" \
 	src="source ~/.config/zsh/.zshrc && echo 'sourceado nwn!'"
 
 # Comandos administrativos de Portage
@@ -66,19 +65,13 @@ alias \
 	tn="tmux-sessionizer.sh" \
 	tk="tmux kill-session"
 
-# enable color support of ls and also add handy aliases
 alias \
 	ls="ls -hN --color=auto --group-directories-first" \
-	dt='ls -l | grep "$(if [[ "$(date "+%-d")" -lt 10 ]]; \
-        then date "+%b  %-d"; else date "+%b %-d"; fi)"' \
-	dir="dir --color=auto" \
-	vdir="vdir --color=auto" \
-	grep="grep --color=auto" \
-	fgrep="fgrep --color=auto" \
-	egrep="egrep --color=auto" \
-	diff="diff --color=auto" \
 	fclist="fc-list -f '%{file}\n'" \
-	ip="ip --color=auto"
+
+for program in dir vdir grep fgrep egrep diff ip; do
+    eval "alias $program='$program --color=auto'"
+done
 
 # Mpv
 alias podcast="mpv --no-video"
