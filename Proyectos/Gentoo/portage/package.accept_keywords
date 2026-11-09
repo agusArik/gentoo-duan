@@ -10,6 +10,7 @@ gui-apps/sway-audio-idle-inhibit
 app-text/sioyek **
 app-text/zathura
 app-text/zathura-cb
+app-editos/vscode
 app-text/zathura-pdf-poppler
 dev-libs/girara
 dev-libs/jemalloc
