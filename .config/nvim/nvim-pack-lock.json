@@ -55,7 +55,8 @@
     },
     "nvim-treesitter": {
       "rev": "493890b87a81dfe6a7e577dbc364ae33fa482da9",
-      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
     },
     "obsidian.nvim": {
       "rev": "726b60c89f4bafef267a714ea1faa1335bdd414a",

@@ -1,5 +1,12 @@
 augroup = vim.api.nvim_create_augroup("UserConfig", { clear = true })
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "markdown" },
+	callback = function()
+		vim.treesitter.start()
+	end,
+})
+
 -- Format on save (ONLY real file buffers, ONLY when efm is attached)
 vim.api.nvim_create_autocmd("BufWritePre", {
 	group = augroup,
@@ -195,13 +202,3 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 		vim.cmd("let g:netrw_list_hide= netrw_gitignore#Hide() .. ',.git*,__pycache__'")
 	end,
 })
-
--- vim.keymap.set("n", "<Leader>b", function()
--- 	local curbufnr = vim.api.nvim_get_current_buf()
--- 	local buflist = vim.api.nvim_list_bufs()
--- 	for _, bufnr in ipairs(buflist) do
--- 		if vim.bo[bufnr].buflisted and bufnr ~= curbufnr and (vim.fn.getbufvar(bufnr, "bufpersist") ~= 1) then
--- 			vim.cmd("bd " .. tostring(bufnr))
--- 		end
--- 	end
--- end, { silent = true, desc = "Close unused buffers" })

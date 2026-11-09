@@ -37,9 +37,8 @@ vim.pack.add({
 	"https://github.com/lewis6991/gitsigns.nvim",
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
-		branch = "main",
-		build = ":TSUpdate",
-	}, -- improved syntax
+		version = "main",
+	},
 	"https://github.com/mason-org/mason.nvim", -- look for lsps and formatters in one place
 	"https://github.com/mason-org/mason-lspconfig.nvim",
 	"https://github.com/nvim-lua/plenary.nvim",
@@ -81,11 +80,29 @@ packadd("LuaSnip")
 require("plugins.lsp")
 require("plugins.luasnip")
 require("plugins.blink")
-require("plugins.treesitter")
 
 require("netrw").setup({})
 
-require("render-markdown").setup({})
+require("nvim-treesitter").install({
+	"lua",
+	"markdown",
+	"markdown_inline",
+	"html",
+	"yaml",
+	"vim",
+	"vimdoc",
+	"c",
+	"css",
+	"typst",
+	"javascript",
+	"typescript",
+	"json",
+})
+
+require("render-markdown").setup({
+	render_modes = { "n", "c", "t", "i" },
+	latex = { enabled = false },
+})
 
 require("which-key").setup({
 	{ "zg", desc = "Añadir palabra a diccionario" },
